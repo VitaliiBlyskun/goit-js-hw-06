@@ -4,10 +4,13 @@ function getRandomHexColor() {
 
 const area = document.querySelector(".widget");
 const button = document.querySelector(".change-color");
+const body = document.querySelector("body");
+const span = document.querySelector(".color")
 
 button.addEventListener("click", onClickButton);
 
 function onClickButton() {
-  area.style.backgroundColor = getRandomHexColor();
+  span.textContent = getRandomHexColor();
+  body.style.backgroundColor = getRandomHexColor();
 }
 
